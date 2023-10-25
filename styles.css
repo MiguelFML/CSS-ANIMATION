@@ -1,0 +1,150 @@
+.blinking-div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.rotating-square {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotateX(0);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+.disappearing-button {
+    width: 100px;
+    height: 50px;
+    background-color: green;
+}
+
+.disappearing-button.clicked {
+    animation: disappear 1s forwards;
+}
+
+@keyframes disappear {
+    to {
+        opacity: 0;
+    }
+}
+
+.moving-element {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+.moving-element.clicked {
+    animation: move-up 1s forwards;
+}
+
+@keyframes move-up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50px);
+    }
+}
+
+.explosion-element {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+.explosion-element.clicked {
+    animation: explode 1s forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(2) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+}
+
+.loading span {
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    margin: 5px;
+    display: inline-block;
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.text-slide-container {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-slide {
+    font-size: 24px;
+    animation: text-slider 9s infinite;
+}
+
+@keyframes text-slider {
+    0% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    66.66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.parallax-element {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    animation: parallax 2s infinite alternate;
+}
+
+@keyframes parallax {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}
